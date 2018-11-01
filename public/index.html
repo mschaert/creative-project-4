@@ -1,0 +1,39 @@
+<!-- http://18.223.187.46:4200/ -->
+<html>
+
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/style.css">
+    <title>Creative Project 4</title>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-4">Pomodoro</h1>
+        <p>A pomodoro is a 25 minute block of time where you focus on one task with no distractions. Each pomodoro should be followed by a 5 minute break. (For demo purposes those times have been adjusted to seconds.)</p>
+    </div>
+
+    <div id="taskManager">
+        <mat-form-field>
+            <input id="task" placeholder="Task">
+        </mat-form-field>
+        <br /><br />
+        <button class="mat-raised-button" id="StartPomodoro">Start</button>
+        <br /><br />
+        <div id="completedPomodoros" style="display:none;">
+            <p>Completed pomodoros</p>
+            <ul>
+            </ul>
+        </div>
+    </div>
+
+    <div id="pomodoro" style="display:none;">
+        <div id="currentTask"></div>
+        <div id="timer"></div>
+    </div>
+
+    <script type='text/javascript' src='script.js'></script>
+</body>
+
+</html>
