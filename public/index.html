@@ -11,26 +11,29 @@
 <body>
     <div class="jumbotron">
         <h1 class="display-4">Pomodoro</h1>
-        <p>A pomodoro is a 25 minute block of time where you focus on one task with no distractions. Each pomodoro should be followed by a 5 minute break. (For demo purposes those times have been adjusted to seconds.)</p>
+        <p>A pomodoro is a 25 minute block of time where you focus on one task with no distractions. Each pomodoro should be followed by a 3-5 minute break or a longer 15-30 minute break after your fourth pomodoro. (For the demo those times have been
+            adjusted to seconds.)</p>
+    </div>
+
+    <div id="iframeContainer">
+        <iframe id="kitKat" style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/DLJgyr-g3Ck?controls=0&rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
     <div id="taskManager">
         <mat-form-field>
-            <input id="task" placeholder="Task">
+            <input id="task" placeholder="Enter a task">
         </mat-form-field>
-        <br /><br />
-        <button class="mat-raised-button" id="StartPomodoro">Start</button>
-        <br /><br />
-        <div id="completedPomodoros" style="display:none;">
-            <p>Completed pomodoros</p>
-            <ul>
-            </ul>
-        </div>
     </div>
 
     <div id="pomodoro" style="display:none;">
         <div id="currentTask"></div>
         <div id="timer"></div>
+    </div>
+
+    <div id="completedPomodoros" style="display:none;">
+        <p>Completed Pomodoros</p>
+        <ul>
+        </ul>
     </div>
 
     <script type='text/javascript' src='script.js'></script>

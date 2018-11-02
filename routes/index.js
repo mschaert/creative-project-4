@@ -5,23 +5,22 @@ var request = require('request');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Express' });
+    res.render('index', { title: 'Express' });
 });
 
-// router.get('/owl', function(req, res, next) {
-// 	var url = "https://owlbot.info/api/v1/dictionary/";
-// 	console.log("query ", req.query);
-// 	url += req.query['q'];
-// 	url += "?format=json";
-// 	request(url).pipe(res);
-// });
-
-// router.get('/getcity', function(req, res, next) {
-// 	var url = "http://bioresearch.byu.edu/cs260/jquery/getcity.cgi?q=";
-// 	console.log("query ", req.query);
-// 	url += req.query['q'];
-// 	console.log(url);
-// 	request(url).pipe(res);
-// });
+router.get('/time', function(req, res, next) {
+    var formattedTime;
+    var minutes = req.query['m'];
+    var seconds = req.query['s'];
+    
+    if (seconds < 10) {
+        formattedTime = minutes + ":0" + seconds;
+    }
+    else {
+        formattedTime = minutes + ":" + seconds;
+    }
+    console.log(formattedTime);
+    res.json({time: formattedTime});
+});
 
 module.exports = router;

@@ -1,14 +1,39 @@
-#taskManager {
+#completedPomodoros, #pomodoro, #taskManager  {
   padding: 30px;
 }
 
 #task {
-  /*display: flex;*/
-  min-width: 250px;
-  max-width: 500px;
   width: 100%;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  font-size: 3em;
 }
 
 #pomodoro {
+  margin: 0 auto;
+  font-size:  3em;
+  width: 100%;
+  text-align: center;
+}
+
+#completedPomodoros {
+  font-size: 2em;
+}
+
+input:focus {
+  outline: none;
+}
+
+#completedPomodoros ul {
+  list-style-type: none;
+}
+
+#completedPomodoros ul li:before {
+  content: '✓ ';
+}
+
+#kitKat {
+  display: block;
   margin: 0 auto;
 }
